@@ -1,0 +1,45 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Test Script</title>
+    <link href="node_modules/mocha/mocha.css" rel="stylesheet"/>
+</head>
+<body>
+  <div id="mocha"></div>
+</body>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/mocha/mocha.js"></script>
+    <script src="node_modules/requirejs/require.js"></script>
+    <script src="node_modules/expect.js/expect.js"></script>
+    
+    <script>
+    	
+		require.config({
+			baseUrl: '.',
+			packages: [
+				{
+					name: 'add-events',
+					location: 'node_modules/add-events',
+					main: 'index'
+				}
+			]
+		});
+    	
+        $(document).ready(function() {
+            function assert(expr, msg) {
+                if (!expr) throw new Error(msg || 'failed');
+            }
+            require.config({
+                baseUrl: '.',
+            });
+                
+            mocha.setup('bdd')
+            mocha.globals(['Module']);
+            require(['./test/index'], function(index) {
+                mocha.run();
+            });
+        });
+    </script>
+
+</html>
+
