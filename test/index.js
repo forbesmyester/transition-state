@@ -20,11 +20,10 @@
 			factory.bind(this, expect)
 		);
 	} else {
-		throw "Not tested";
-		// root.returnExports = factory(
-		// 	root.expect,
-		// 	root.SyncIt_TransitionState
-		// );
+		root.returnExports = factory(
+			root.expect,
+			root.TransitionState
+		);
 	}
 }(this, function (
 	expect,

@@ -5,7 +5,7 @@
 	} else if (typeof define === 'function' && define.amd) {
 		define(['add-events'],factory);
 	} else {
-		root.SyncIt_TransitionState = factory(root.SyncIt_addEvents);
+		root.TransitionState = factory(root.addEvents);
 	}
 }(this, function (addEvents) {
 

@@ -1,0 +1,26 @@
+{
+  "name": "transition-state",
+  "main": "index.js",
+  "version": "0.9.1",
+  "homepage": "https://github.com/forbesmyester/transition-state",
+  "authors": [
+    "Matthew Forrester <matt@keyboardwritescode.com>"
+  ],
+  "description": "A simple state machine",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "StateMachine"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
