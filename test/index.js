@@ -22,7 +22,7 @@
 	} else {
 		root.returnExports = factory(
 			root.expect,
-			root.transitionstate
+			root.TransitionState
 		);
 	}
 }(this, function (
