@@ -15,14 +15,14 @@
 		// AMD. Register as an anonymous module.
 		define(
 			[
-				'../index.js'
+				'../index.umd.js'
 			],
 			factory.bind(this, expect)
 		);
 	} else {
 		root.returnExports = factory(
 			root.expect,
-			root.TransitionState
+			root.transitionstate
 		);
 	}
 }(this, function (

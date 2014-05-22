@@ -1,13 +1,4 @@
-(function (root, factory) { // UMD from https://github.com/umdjs/umd/blob/master/returnExports.js
-	"use strict";
-	if (typeof exports === 'object') {
-		module.exports = factory(require('add-events'));
-	} else if (typeof define === 'function' && define.amd) {
-		define(['add-events'],factory);
-	} else {
-		root.TransitionState = factory(root.addEvents);
-	}
-}(this, function (addEvents) {
+module.exports = (function (addEvents) {
 
 "use strict";
 
@@ -70,4 +61,4 @@ addEvents(TransitionState, ['changed-state', 'initial-state']);
 
 return TransitionState;
 
-}));
+}(require('add-events')));

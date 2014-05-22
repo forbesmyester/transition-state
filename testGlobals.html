@@ -11,13 +11,12 @@
     <script src="node_modules/mocha/mocha.js"></script>
     <script src="node_modules/expect.js/expect.js"></script>
     <script src="node_modules/add-events/index.js"></script>
-    <script src="./index.js"></script>
+    <script src="./index.umd.js"></script>
     
     <script>
 		function assert(expr, msg) {
 			if (!expr) throw new Error(msg || 'failed');
 		}
-		console.log("STARTED");
 		mocha.setup('bdd')
 		mocha.globals(['Module']);
     </script>
